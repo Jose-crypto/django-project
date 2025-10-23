@@ -31,11 +31,14 @@
             </div>
             
             <div class="mt-3 d-flex justify-content-between">
-              <button type="button" class="btn btn-outline-danger btn-sm">🗑 Borrar</button>
-              <button type="button" class="btn btn-success btn-sm">✔ Done</button>
+              {% if not task.done %}
+                <button type="button" class="btn btn-outline-danger btn-sm">🗑 Terminar</button>
+              {% else %}
+              <button type="button" class="btn btn-success btn-sm">✔ Hecho</button>
+              {% endif %}
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     {% empty %}
       <div class="col-12 text-center">

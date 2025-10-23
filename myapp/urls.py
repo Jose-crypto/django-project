@@ -4,10 +4,10 @@ from . import views
 
 urlpatterns=[
     path('',views.index),
-    path('about/',views.about),
-    path('hello/<str:username>',views.greeting),
-    path('projects/',views.projects),
-    path('tasks/',views.tasks),
-    path('form/', views.create_task),
-    path('form_create_project',views.create_project)
+    path('about/',views.about , name='about'),
+    path('hello/<str:username>',views.greeting,name='hello'),
+    path('projects/',views.projects,name='projects'),
+    path('tasks/',views.tasks, name='tasks'), 
+    path('form/', views.create_task, name='form'),
+    path('form_create_project/',views.create_project, name='form_create_project')
 ]
