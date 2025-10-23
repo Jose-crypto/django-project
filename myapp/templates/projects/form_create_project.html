@@ -1,11 +1,15 @@
 {% extends 'layouts/base.html'%}
+{% load crispy_forms_tags %}
 {% block content%}
+<div class="container">
 <form method="POST">
     {% csrf_token %}
-    {{form_create_project.as_p}}
-    <button>
-        guardar
-    </button>
+    {{ form|crispy }}
+   
+    <button type="submit" class="btn btn-primary">Crear proyecto</button>
+
 </form>
+</div>
+
 
 {%endblock%}

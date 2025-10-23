@@ -44,7 +44,7 @@ def create_task(request):
 def create_project(request):
     if request.method== 'GET':
         return render(request, 'projects/form_create_project.html',{
-            'form': CreateNewTask()
+            'form': ProjectForm()
         })
     else:
         ProjectForm.objects.create(name=request.POST['name'])
