@@ -7,10 +7,16 @@
     <title>index</title>
 </head>
 <body>
-    <h1 class="text-primary">{{title}}</h1>
+  {% extends 'layouts/base.html' %}
+
+  {% block content %}
+   <h1 class="text-primary">{{title}}</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing 
         elit. Maxime sapiente alias quod tempora minus, itaque
          nam accusamus laudantium unde explicabo soluta neque?
-          Soluta tenetur minima minus nulla iure vel quas?</p>
+          Soluta tenetur minima minus nulla iure vel quas?
+    </p>
+  {% endblock %} 
+  
 </body>
 </html>
